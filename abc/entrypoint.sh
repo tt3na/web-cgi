@@ -27,6 +27,21 @@ cat << FIN >> /etc/httpd/conf.modules.d/00-mpm.conf
 ScriptSock /var/run/httpd/cgid.sock
 FIN
 
+
+cat << FIN > /home/abc/.bashrc
+# .bashrc
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+FIN
+
 chown ${RUN_USER}:${RUN_USER} /var/run/httpd
 
 mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
