@@ -27,7 +27,6 @@ cat << FIN >> /etc/httpd/conf.modules.d/00-mpm.conf
 ScriptSock /var/run/httpd/cgid.sock
 FIN
 
-
 cat << FIN > /home/abc/.bashrc
 # .bashrc
 # Source global definitions
