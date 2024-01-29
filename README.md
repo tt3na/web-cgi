@@ -1,5 +1,7 @@
 ### web-cgi
 
+PythonやShellScriptで作ったcgiを手っ取り早く動かすためのコンテナです。
+
 Usage:
 ```
 docker-compose up -d
