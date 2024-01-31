@@ -6,7 +6,7 @@ services:
         container_name: "web-cgi"
         hostname: "web-cgi"
         volumes:
-          - "./abc:/home/abc"
+          - "./data:/home/abc"
         ports:
           - 58080:80
         environment:
